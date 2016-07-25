@@ -1,0 +1,21 @@
+<!-- Navbar -->
+<div class="navbar navbar-default" role="navigation" ng-controller="ShopsCtrl">
+    <div class="container-fluid container-nav-sm-fix">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" ng-click="navbarIsCollapsed = !navbarIsCollapsed">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Klamotten Check</a>
+        </div>
+
+        <div class="collapse navbar-collapse" uib-collapse="navbarIsCollapsed">
+            <ul class="nav navbar-nav">
+                <li ng-class="{active: navbarIsActive('/shops')}"><a href="#/shops">Shops</a></li>
+                <li ng-class="{active: navbarIsActive('/about')}"><a href="#/about">About</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

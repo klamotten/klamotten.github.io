@@ -9,6 +9,11 @@ angular.module('klamottenApp.shops', ['ngRoute'])
   });
 }])
 
-.controller('ShopsCtrl', [function() {
+.controller('ShopsCtrl', ['$scope', '$location', function($scope, $location) {
+    $scope.navbarIsCollapsed = true;
 
+    $scope.navbarIsActive = function (viewLocation) {
+        return $location.path().indexOf(viewLocation) == 0;
+    };
 }]);
+
