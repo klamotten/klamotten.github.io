@@ -79,20 +79,12 @@ angular.module('klamottenApp.shops', ['ngRoute'])
             }
         }
 
-        // var alphabetical = [];
-        // if (result.length > 0) {
-        //     var currentGroup = [];
-        //     var currentLetter = result[0][0];
-        //
-        //     for (var i = 1; i < result.length; ++i) {
-        //         if (result[i][0] != result[i-1][0] {
-        //             alphabetical.push({ 'letter' : currentLetter, 'shops' : })
-        //         }
-        //     }
-        //
-        // }
-
         return result;
+    };
+
+    $scope.hideKeyboard = function() {
+        document.activeElement.blur();
+        document.querySelector('#filterInput').blur();
     }
 }]);
 
